@@ -1,0 +1,42 @@
+{
+  "name": "reactionic-kitchensink",
+  "version": "0.0.1",
+  "description": "Kitchen Sink demo app for React-Ionic",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:pors/reactionic-kitchensink.git"
+  },
+  "keywords": [
+    "Meteor",
+    "React",
+    "Ionic",
+    "Cordova",
+    "Phonegap",
+    "Hybrid"
+  ],
+  "author": "Mark Pors <npm@pors.net>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "history": "^1.17.0",
+    "lodash": "^4.5.1",
+    "react": "^0.14.7",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^1.0.2",
+    "react-slick": "^0.10.0",
+    "react-static-container": "^1.0.0",
+    "reactionic": "^0.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.12",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0"
+  }
+}

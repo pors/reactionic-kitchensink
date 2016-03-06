@@ -1,0 +1,43 @@
+$react-blue: #00d8ff;
+$bar-dark-text: $react-blue;
+$dark: #000000;
+$positive: $react-blue;
+
+@import '../../../node_modules/reactionic/src/styles/_reactionic.scss';
+
+.bar-dark .button.button-clear {
+    color: $react-blue;
+}
+
+.stretch {
+    height: 100%;
+    width: 100%;
+}
+
+.platform-ios.platform-cordova {
+  &:not(.fullscreen) {
+    .scroll-content.ios-top-margin {
+        top: $ios-statusbar-height;
+    }
+    .bar-header:not(.bar-subheader) {
+      span > .title {
+          top: $ios-statusbar-height;
+      }
+    }
+  }
+}
+
+.slide-demo {
+    text-align: center;
+    padding-top: 200px;
+}
+.slide-demo.dark {
+    background-color: #444;
+    h3 {
+        color: $react-blue;
+    }
+}
+.slide-demo.blue {
+    background-color: $react-blue;
+    color: #000;
+}
