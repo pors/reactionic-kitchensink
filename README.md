@@ -53,7 +53,7 @@ how: [meteor.com](https://www.meteor.com/install)
 
 Installation is straightforward:
 
-* Download the zip file [here](@@@@@@)
+* Download the zip file [here](https://github.com/pors/reactionic-kitchensink/archive/master.zip)
 * Unzip the file
 
 Then in a terminal:
@@ -100,7 +100,7 @@ Or without the `sudo`, depending on your setup.
 
 Installation is straightforward:
 
-* Download the zip file [here](@@@@@@)
+* Download the zip file [here](https://github.com/pors/reactionic-kitchensink/archive/master.zip)
 * Unzip the file
 
 Then in a terminal:
