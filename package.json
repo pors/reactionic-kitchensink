@@ -1,6 +1,6 @@
 {
   "name": "reactionic-kitchensink",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Kitchen Sink demo app for React-Ionic",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,7 +29,7 @@
     "react-router": "^1.0.2",
     "react-slick": "^0.10.0",
     "react-static-container": "^1.0.0",
-    "reactionic": "^0.1.1"
+    "reactionic": "^0.1.2"
   },
   "devDependencies": {
     "webpack": "^1.12.12",
