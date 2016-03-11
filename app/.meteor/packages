@@ -14,7 +14,6 @@ tracker                 # Meteor's client-side reactive programming library
 
 
 static-html
-digilord:faker
 random
 accounts-base
 accounts-password
