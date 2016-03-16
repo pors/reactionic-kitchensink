@@ -18,9 +18,6 @@ var Forms = React.createClass({
     var radioLabel = 'Radio ' + this.state.checkedRadio;
     return (
       <IonContent customClasses=""
-                  hasHeader={true}
-                  hasFooter={false}
-                  scroll={true}
                   {...this.props}>
         <IonList>
           <IonItem divider>Checkbox</IonItem>          

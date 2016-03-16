@@ -12,7 +12,6 @@ var Backdrop = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonButton color="dark" type="outline" onClick={() => this.ionShowBackdropForMS(1000)}>Show backdrop (1 sec)</IonButton>

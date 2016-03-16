@@ -5,7 +5,6 @@ var Lists = React.createClass({
   render() {
     return (
       <IonContent customClasses=""
-                  hasHeader={true}
                   {...this.props}>
         <IonList>
           <IonItem divider>List Icons</IonItem>

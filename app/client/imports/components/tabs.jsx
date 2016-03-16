@@ -19,8 +19,8 @@ var Tabs = React.createClass({
                       rightButton={null}
                       {...this.props}
         />
-        {React.cloneElement(this.props.children, { platform: this.props.platform })}
-        <IonTabs platform={this.props.platform} customClasses="tabs-light">
+        {React.cloneElement(this.props.children, { ...this.props })}
+        <IonTabs platform={this.props.platform} customClasses="tabs-light" ionUpdateHasX={this.props.ionUpdateHasX}>
       	  <IonTab icon="ios-home" to="/tabs/one" label="Tab 1" />
           <IonTab icon="ios-star" to="/tabs/two" label="Tab 2" />
       	  <IonTab icon="ios-heart" to="/tabs/three" label="Tab 3" />
@@ -36,9 +36,6 @@ var TabsOne = React.createClass({
     var platform = this.props.platform;
     return (
         <IonContent customClasses="padding"
-                    hasHeader={true}
-                    hasTabs={!platform.isAndroid}
-                    hasTabsTop={platform.isAndroid}
                     {...this.props}>
           <h3>Tab 1</h3>
         </IonContent>
@@ -51,9 +48,6 @@ var TabsTwo = React.createClass({
     var platform = this.props.platform;
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
-                  hasTabs={!platform.isAndroid}
-                  hasTabsTop={platform.isAndroid}
                   {...this.props}>
         <h3>Tab 2</h3>
       </IonContent>
@@ -66,9 +60,6 @@ var TabsThree = React.createClass({
     var platform = this.props.platform;
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
-                  hasTabs={!platform.isAndroid}
-                  hasTabsTop={platform.isAndroid}
                   {...this.props}>
         <h3>Tab 3</h3>
       </IonContent>
@@ -81,9 +72,6 @@ var TabsFour = React.createClass({
     var platform = this.props.platform;
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
-                  hasTabs={!platform.isAndroid}
-                  hasTabsTop={platform.isAndroid}
                   {...this.props}>
         <h3>Tab 4</h3>
       </IonContent>

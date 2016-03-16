@@ -6,7 +6,6 @@ var Navigation = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonNavBackButton icon="ion-chevron-left"
@@ -33,7 +32,6 @@ var NavigationOne = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonNavBackButton icon="ion-chevron-left"
@@ -60,7 +58,6 @@ var NavigationTwo = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonNavBackButton icon="ion-chevron-left"
@@ -87,7 +84,6 @@ var NavigationThree = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonNavBackButton icon="ion-chevron-left"

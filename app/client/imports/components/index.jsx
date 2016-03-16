@@ -25,9 +25,6 @@ var Index = React.createClass({
     });
     return (
       <IonContent customClasses=""
-                  hasHeader={true}
-                  hasFooter={false}
-                  scroll={true}
                   {...this.props}>
       <IonList>
         {items}

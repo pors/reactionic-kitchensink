@@ -5,7 +5,6 @@ var TBI = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <div className="text-center padding">
           <span className="badge badge-assertive">To Be Implemented</span>

@@ -5,7 +5,6 @@ var Buttons = React.createClass({
   render() {
     return (
       <IonContent customClasses=""
-                  hasHeader={true}
       {...this.props}>
         <div className="text-center">
           <div className="padding"><IonButton >Default</IonButton></div>

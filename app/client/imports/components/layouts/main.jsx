@@ -52,7 +52,14 @@ var Layout = React.createClass({
               ionShowBackdrop: this.props.ionShowBackdrop,
               ionShowLoading: this.props.ionShowLoading,
               ionKeyboardHeight: this.props.ionKeyboardHeight,
-              pageList: this.props.pageList
+              pageList: this.props.pageList,
+              ionUpdateHasX: this.props.ionUpdateHasX,
+              ionHasTabs: this.props.ionHasTabs,
+              ionHasTabsTop: this.props.ionHasTabsTop,
+              ionHasHeader: this.props.ionHasHeader,
+              ionHasSubheader: this.props.ionHasSubheader,
+              ionHasFooter: this.props.ionHasFooter,
+              ionHasSubfooter: this.props.ionHasSubfooter
               })}
           </IonView>
         </IonNavView>

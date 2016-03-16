@@ -5,7 +5,6 @@ var Spinners = React.createClass({
   render() {
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
       {...this.props}>
       <div className="text-center">
         <div className="padding">iOS</div><div><IonSpinner icon="ios" /></div>

@@ -8,9 +8,6 @@ var Loading = React.createClass({
 
     return (
       <IonContent customClasses="padding text-center"
-                  hasHeader={true}
-                  hasFooter={false}
-                  scroll={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <div className="padding">

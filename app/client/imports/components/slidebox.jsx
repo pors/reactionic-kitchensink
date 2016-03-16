@@ -5,7 +5,6 @@ var Slidebox = React.createClass({
   render() {
     return (
       <IonContent customClasses="slider-content-fix"
-                  hasHeader={true}
                   scroll={false}
                   {...this.props}>
         <IonSlideBox>

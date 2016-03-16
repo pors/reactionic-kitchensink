@@ -8,7 +8,6 @@ var Modal = React.createClass({
 
     return (
       <IonContent customClasses="padding"
-                  hasHeader={true}
                   {...this.props}>
         <AbsoluteMiddle>
           <IonButton color="dark" type="outline" onClick={() => this.props.ionShowModal(demoModal)}>Show modal</IonButton>
