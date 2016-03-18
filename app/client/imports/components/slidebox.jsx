@@ -2,6 +2,16 @@ import React from 'react';
 import { IonContent, IonSlideBox } from 'reactionic';
 
 var Slidebox = React.createClass({
+  componentDidMount() {
+    if (this.props.ionSnapper && this.props.ionSnapper.disable) {
+      this.props.ionSnapper.disable();
+    }
+  },
+  componentWillUnmount() {
+    if (this.props.ionSnapper && this.props.ionSnapper.enable) {
+      this.props.ionSnapper.enable();
+    }
+  },
   render() {
     return (
       <IonContent customClasses="slider-content-fix"

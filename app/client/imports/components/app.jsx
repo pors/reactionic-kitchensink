@@ -21,7 +21,7 @@ var App = React.createClass({
     
     return (
       <IonBody platform={platform} >
-        { React.cloneElement(this.props.children, {pageList:this.props.route.pageList}) }
+        { React.cloneElement(this.props.children, {pageList:this.props.route.pageList}) }        
       </IonBody>
     );
   }
