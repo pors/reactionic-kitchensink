@@ -1,5 +1,6 @@
 import React from 'react';
 import { IonContent, IonHeaderBar, IonButton, IonTabs, IonTab } from 'reactionic';
+import classnames from 'classnames';
 
 var Tabs = React.createClass({
   render() {
@@ -10,7 +11,10 @@ var Tabs = React.createClass({
                  link="/"
       />
     );
-
+    var classes = classnames(
+      {'tabs-light tabs-striped tabs-icon-left': this.props.platform.isAndroid,
+       'tabs-light tabs-icon-top': !this.props.platform.isAndroid}
+    );
     return (
       <div>
         <IonHeaderBar customClasses="bar-dark"
@@ -20,7 +24,7 @@ var Tabs = React.createClass({
                       {...this.props}
         />
         {React.cloneElement(this.props.children, { ...this.props })}
-        <IonTabs platform={this.props.platform} customClasses="tabs-light" ionUpdateHasX={this.props.ionUpdateHasX}>
+        <IonTabs tabsTop={this.props.platform.isAndroid} customClasses={classes} ionUpdateHasX={this.props.ionUpdateHasX}>
       	  <IonTab icon="ios-home" to="/tabs/one" label="Tab 1" />
           <IonTab icon="ios-star" to="/tabs/two" label="Tab 2" />
       	  <IonTab icon="ios-heart" to="/tabs/three" label="Tab 3" />
