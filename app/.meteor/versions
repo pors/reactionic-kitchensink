@@ -56,7 +56,6 @@ modules@0.5.1-rc.8
 modules-runtime@0.6.1-rc.8
 mongo@1.1.5-rc.8
 mongo-id@1.0.2-rc.8
-mrt:redis@0.1.3
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.41-rc.8
 observe-sequence@1.0.9-rc.8
