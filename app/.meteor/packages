@@ -18,7 +18,6 @@ random
 accounts-base
 accounts-password
 anti:fake
-mrt:redis
 check
 aldeed:collection2
 react-meteor-data
