@@ -17,7 +17,6 @@ import Lists from './imports/components/lists.jsx';
 import Loading from './imports/components/loading.jsx';
 import Modal from './imports/components/modal.jsx';
 import { Navigation, NavigationOne, NavigationTwo, NavigationThree } from './imports/components/navigation.jsx';
-import Select from './imports/components/select.jsx';
 import SideMenus from './imports/components/sidemenus.jsx';
 import Slidebox from './imports/components/slidebox.jsx';
 import Spinners from './imports/components/spinners.jsx';
@@ -41,7 +40,6 @@ var main = function () {
     { path:'/navigation/one', component:NavigationOne, title:'Level 1', dontindex:true},
     { path:'/navigation/two', component:NavigationTwo, title:'Level 2', dontindex:true},
     { path:'/navigation/three', component:NavigationThree, title:'Level 3', dontindex:true},
-    { path:'/select', component:Select, title:'Select', done:true},
     { path:'/popover', component:TBI, title:'Popover', done:false},
     { path:'/popup', component:TBI, title:'Popup', done:false},
     { path:'/sideMenus', component:SideMenus, title:'Side Menus', done:true},
