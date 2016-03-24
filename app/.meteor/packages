@@ -15,6 +15,11 @@ tracker                 # Meteor's client-side reactive programming library
 
 static-html
 random
+accounts-base
+accounts-password
+anti:fake
+check
+aldeed:collection2
 react-meteor-data
 fourseven:scss
 mobile-experience
