@@ -7,15 +7,8 @@ var Forms = React.createClass({
       checkedRadio: 'Button',
       checkedBox: false,
       checkedToggle: false,
-      options:['blue','yellow','red'],
-      selectValue:''
+      selectValue: 'yellow'
     }
-  },
-  componentDidMount(){
-    //get the value of the select by default
-    this.setState({
-      selectValue: this.refs.select.state.value
-    })
   },
   radioSelection(name, value) {
     this.setState({ checkedRadio:value });
@@ -27,7 +20,8 @@ var Forms = React.createClass({
     var boxLabel    = 'Checkbox ' + (this.state.checkedBox ? 'checked!' : 'unchecked');
     var toggleLabel = 'Toggle ' + (this.state.checkedToggle ? 'on!' : 'off');
     var radioLabel  = 'Radio ' + this.state.checkedRadio;
-    var selectLabel = 'Select ' + this.state.selectValue;
+    var selectLabel = 'Color: ' + this.state.selectValue;
+    var selectOptions = ['blue','yellow','red'];
     return (
       <IonContent customClasses=""
                   {...this.props}>
@@ -71,10 +65,9 @@ var Forms = React.createClass({
               handleChange={this.radioSelection}
               checked={this.state.checkedRadio === "Gaga"}
           />
-          <IonItem divider>{selectLabel}</IonItem>
-          <IonSelect  ref='select'
-                      label="Color"
-                      options={this.state.options}
+          <IonItem divider>Select</IonItem>
+          <IonSelect  label={selectLabel}
+                      options={selectOptions}
                       defaultValue='yellow'
                       handleChange={this.changeValue}>
           </IonSelect>
