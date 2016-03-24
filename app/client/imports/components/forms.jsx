@@ -1,5 +1,7 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect } from 'reactionic';
+import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect, IonIcon } from 'reactionic';
+import IonRange from './ionRange'
+
 
 var Forms = React.createClass({
   getInitialState: function () {
@@ -8,13 +10,15 @@ var Forms = React.createClass({
       checkedBox: false,
       checkedToggle: false,
       options:['blue','yellow','red'],
-      selectValue:''
+      selectValue:'',
+      rangeValue: ''
     }
   },
   componentDidMount(){
     //get the value of the select by default
     this.setState({
-      selectValue: this.refs.select.state.value
+      selectValue: this.refs.select.state.value,
+      rangeValue: this.refs.range.state.value
     })
   },
   radioSelection(name, value) {
@@ -23,11 +27,15 @@ var Forms = React.createClass({
   changeValue(value){
     this.setState({ selectValue: value});
   },
+  rangeSelection(value){
+    this.setState({ rangeValue: value});
+  },
   render() {
     var boxLabel    = 'Checkbox ' + (this.state.checkedBox ? 'checked!' : 'unchecked');
     var toggleLabel = 'Toggle ' + (this.state.checkedToggle ? 'on!' : 'off');
     var radioLabel  = 'Radio ' + this.state.checkedRadio;
     var selectLabel = 'Select ' + this.state.selectValue;
+    var rangeLabel  = 'Range '+ this.state.rangeValue;
     return (
       <IonContent customClasses=""
                   {...this.props}>
@@ -78,6 +86,15 @@ var Forms = React.createClass({
                       defaultValue='yellow'
                       handleChange={this.changeValue}>
           </IonSelect>
+          <IonItem divider>{rangeLabel}</IonItem>
+          <IonRange ref='range'
+                    iconBeforeInput={<IonIcon icon='ios-sunny-outline'/>}
+                    iconAfterInput={<IonIcon icon='ios-sunny'/>}
+                    defaultValue={33}
+                    handleChange={this.rangeSelection}
+                    min={0}
+                    max={100}>
+          </IonRange>
         </IonList>
 
       </IonContent>
