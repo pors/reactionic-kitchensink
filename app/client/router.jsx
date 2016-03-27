@@ -9,6 +9,7 @@ import NoMatch from './imports/components/nomatch.jsx';
 import TBI from './imports/components/tbi.jsx';
 import Index from './imports/components/index.jsx';
 import About from './imports/components/about.jsx';
+import ActionSheet from './imports/components/actionSheet.jsx';
 import Buttons from './imports/components/buttons.jsx';
 import Backdrop from './imports/components/backdrop.jsx';
 import Forms from './imports/components/forms.jsx';
@@ -28,7 +29,7 @@ var main = function () {
   var pageList = [
     { path:'/', component:Index, title:'React Ionic', done:true},
     { path:'/about', component:About, title:'About', done:true},
-    { path:'/actionSheet', component:TBI, title:'Action Sheet', done:false},
+    { path:'/actionSheet', component:ActionSheet, title:'Action Sheet', done:true},
     { path:'/backdrop', component:Backdrop, title:'Backdrop', done:true},
     { path:'/buttons', component:Buttons, title:'Buttons', done:true},
     { path:'/forms', component:Forms, title:'Form Elements', done:true},
