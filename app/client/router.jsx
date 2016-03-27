@@ -51,7 +51,7 @@ var main = function () {
         { path:'/tabs/one', component:TabsOne, title:'Tab 1', done:false, indexRoute:true},
         { path:'/tabs/two', component:TabsTwo, title:'Tab 2', done:false},
         { path:'/tabs/three', component:TabsThree, title:'Tab 3', done:false},
-        { path:'/tabs/four', component:TabsFour, title:'Tab 4', done:false}        
+        { path:'/tabs/four', component:TabsFour, title:'Tab 4', done:false}
       ]
     },
   ];

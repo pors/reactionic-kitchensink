@@ -1,26 +1,32 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio } from 'reactionic';
+import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect } from 'reactionic';
 
 var Forms = React.createClass({
   getInitialState: function () {
     return {
       checkedRadio: 'Button',
       checkedBox: false,
-      checkedToggle: false
+      checkedToggle: false,
+      selectValue: 'yellow'
     }
   },
   radioSelection(name, value) {
     this.setState({ checkedRadio:value });
   },
+  changeValue(value){
+    this.setState({ selectValue: value});
+  },
   render() {
-    var boxLabel = 'Checkbox ' + (this.state.checkedBox ? 'checked!' : 'unchecked');
+    var boxLabel    = 'Checkbox ' + (this.state.checkedBox ? 'checked!' : 'unchecked');
     var toggleLabel = 'Toggle ' + (this.state.checkedToggle ? 'on!' : 'off');
-    var radioLabel = 'Radio ' + this.state.checkedRadio;
+    var radioLabel  = 'Radio ' + this.state.checkedRadio;
+    var selectLabel = 'Color: ' + this.state.selectValue;
+    var selectOptions = ['blue','yellow','red'];
     return (
       <IonContent customClasses=""
                   {...this.props}>
         <IonList>
-          <IonItem divider>Checkbox</IonItem>          
+          <IonItem divider>Checkbox</IonItem>
           <IonItemCheckBox
               color="positive"
               label={boxLabel}
@@ -59,8 +65,14 @@ var Forms = React.createClass({
               handleChange={this.radioSelection}
               checked={this.state.checkedRadio === "Gaga"}
           />
+          <IonItem divider>Select</IonItem>
+          <IonSelect  label={selectLabel}
+                      options={selectOptions}
+                      defaultValue='yellow'
+                      handleChange={this.changeValue}>
+          </IonSelect>
         </IonList>
-        
+
       </IonContent>
     )
   }
