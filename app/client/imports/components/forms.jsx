@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect, IonIcon, IonRange } from 'reactionic';
+import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect, IonIcon } from 'reactionic';
+import IonRange from './ionRange';
 
 var Forms = React.createClass({
   getInitialState: function () {
@@ -8,7 +9,7 @@ var Forms = React.createClass({
       checkedBox: false,
       checkedToggle: false,
       selectValue: 'yellow',
-      rangeValue: '33'
+      rangeValue: '33',
     }
   },
   radioSelection(name, value) {
@@ -37,15 +38,13 @@ var Forms = React.createClass({
               color="positive"
               label={boxLabel}
               checked={false}
-              handleChange={ (toggle) => this.setState({ checkedBox:toggle }) }
-          />
+              handleChange={ (toggle) => this.setState({ checkedBox:toggle }) }/>
           <IonItem divider>Toggle</IonItem>
           <IonItemToggle
               color="positive"
               label={toggleLabel}
               checked={false}
-              handleChange={ (toggle) => this.setState({ checkedToggle:toggle }) }
-          />
+              handleChange={ (toggle) => this.setState({ checkedToggle:toggle }) }/>
           <IonItem divider>{radioLabel}</IonItem>
           <IonItemRadio
               name="group"
@@ -53,24 +52,21 @@ var Forms = React.createClass({
               value="Button"
               icon="checkmark"
               handleChange={this.radioSelection}
-              checked={this.state.checkedRadio === "Button"}
-          />
+              checked={this.state.checkedRadio === "Button"}/>
           <IonItemRadio
               name="group"
               label="Shack"
               value="Shack"
               icon="checkmark"
               handleChange={this.radioSelection}
-              checked={this.state.checkedRadio === "Shack"}
-          />
+              checked={this.state.checkedRadio === "Shack"}/>
           <IonItemRadio
               name="group"
               label="Gaga"
               value="Gaga"
               icon="checkmark"
               handleChange={this.radioSelection}
-              checked={this.state.checkedRadio === "Gaga"}
-          />
+              checked={this.state.checkedRadio === "Gaga"}/>
           <IonItem divider>Select</IonItem>
           <IonSelect  label={selectLabel}
                       options={selectOptions}

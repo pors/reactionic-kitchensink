@@ -4,7 +4,13 @@ import _ from 'lodash';
 import { IonNavView, IonView, IonContent, IonNavBar, IonNavBackButton, IonFooterBar, IonButton,
          IonIcon, IonSideMenuContainer, IonSideMenus, IonSideMenu, IonSideMenuContent } from 'reactionic';
 
-var Layout = React.createClass({  
+var Layout = React.createClass({
+  childContextTypes:{
+    ionSnapper: React.PropTypes.object
+  },
+  getChildContext(){
+    return { ionSnapper: this.props.ionSnapper}
+  },
   getPageProps: function(path) {
 
     var backButton = (
@@ -24,9 +30,9 @@ var Layout = React.createClass({
       page.leftHeaderButton = backButton;
       return page
     });
-    
+
     var pageProps = _.keyBy(pageList, 'path');
-    
+
     // custom pageProps
     pageProps['/'].leftHeaderButton=null;
 
@@ -44,7 +50,7 @@ var Layout = React.createClass({
 
     return pageProps[path];
   },
-  render() {    
+  render() {
     var currentPageProps = this.getPageProps(this.props.location.pathname);
 
     return (
@@ -75,13 +81,13 @@ var Layout = React.createClass({
             </div>
           </IonSideMenu>
         </IonSideMenus>
-        <IonSideMenuContent>          
+        <IonSideMenuContent>
           <IonNavBar customClasses="bar-dark"
                      title={currentPageProps.headerTitle}
                      leftButton={currentPageProps.leftHeaderButton}
                      rightButton={currentPageProps.rightHeaderButton}
                      {...this.props}
-          /> 
+          />
 
           <IonNavView customClasses="" {...this.props}>
             <IonView customClasses="" {...this.props}>
@@ -109,6 +115,5 @@ var Layout = React.createClass({
     );
   }
 });
-  
-export default Layout;
 
+export default Layout;
