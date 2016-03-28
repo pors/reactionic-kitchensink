@@ -1,6 +1,5 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemToggle, IonItemRadio, IonSelect, IonIcon } from 'reactionic';
-import IonRange from './ionRange';
+import { IonContent, IonList, IonItem, IonItemCheckBox, IonItemRadio, IonSelect, IonIcon, IonItemToggle, IonRange } from 'reactionic';
 
 var Forms = React.createClass({
   getInitialState: function () {
@@ -12,6 +11,7 @@ var Forms = React.createClass({
       rangeValue: '33',
     }
   },
+
   radioSelection(name, value) {
     this.setState({ checkedRadio:value });
   },
