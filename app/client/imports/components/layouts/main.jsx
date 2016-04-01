@@ -90,6 +90,7 @@ var Layout = React.createClass({
                 ionSetTransitionDirection: this.props.ionSetTransitionDirection,
                 ionShowModal: this.props.ionShowModal,
                 ionUpdateActionSheet: this.props.ionUpdateActionSheet,
+                ionUpdatePopup: this.props.ionUpdatePopup,
                 ionShowBackdrop: this.props.ionShowBackdrop,
                 ionShowLoading: this.props.ionShowLoading,
                 ionKeyboardHeight: this.props.ionKeyboardHeight,
