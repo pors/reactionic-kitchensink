@@ -25,7 +25,10 @@ var Popup = React.createClass({
                             popupType: 'alert',
                             title: 'An Alert',
                             template: 'This is an alert!',
-                            okText: 'Got It.'
+                            okText: 'Got It.',
+                            onOk: function() {
+                              console.log('Closed alert');
+                            }
                             })}>Show Alert</IonButton>
         
         <IonButton color="dark" type="outline" expand="block"
@@ -33,6 +36,7 @@ var Popup = React.createClass({
                             popupType: 'confirm',
                             title: 'Are you sure?',
                             template: <span>Are you <strong>really</strong> sure?</span>,
+                            cancelType: 'button-light',
                             onOk: function() {
                               console.log('Confirmed');
                             },
@@ -47,8 +51,12 @@ var Popup = React.createClass({
                             title: 'Security Check',
                             template: 'Please enter your password',
                             okText: 'Submit',
+                            cancelType: 'button-light',
                             inputType: 'password',
-                            inputPlaceholder: 'Your Password'
+                            inputPlaceholder: 'Your Password',
+                            onOk: function(e, value) {
+                              console.log('submitted', value);
+                            }
                             })}>Show Prompt</IonButton>
       </IonContent>
     )
