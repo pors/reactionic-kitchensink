@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from "react-router";
 import _ from 'lodash';
-import { IonNavView, IonView, IonContent, IonNavBar, IonNavBackButton, IonFooterBar, IonButton,
-         IonIcon, IonSideMenuContainer, IonSideMenus, IonSideMenu, IonSideMenuContent } from 'reactionic';
+import { IonNavView, IonView, IonContent, IonNavBar, IonNavBackButton, IonFooterBar, IonButton, IonIcon,
+         IonSideMenuContainer, IonSideMenus, IonSideMenu, IonSideMenuContent, IonPopoverButton } from 'reactionic';
+import { DemoPopover } from '../popover';
 
 var Layout = React.createClass({
   childContextTypes:{
@@ -36,6 +37,15 @@ var Layout = React.createClass({
     // custom pageProps
     pageProps['/'].leftHeaderButton=null;
 
+    if (path === '/popover') {
+      let icon = 'ion-more';
+      if (this.props.platform.isAndroid) {
+        icon = 'ion-android-more-vertical';
+      }
+      let demoPopover = <DemoPopover />
+      pageProps['/popover'].rightHeaderButton = <IonPopoverButton type="clear" icon={icon} onClick={ () => { this.props.ionShowPopover(demoPopover) } } />
+    }
+    
     if (path === '/sideMenus') {
       let icon = 'ion-navicon';
       if (this.props.platform.isAndroid) {
