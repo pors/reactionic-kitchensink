@@ -1,5 +1,7 @@
 # React-Ionic Demo #
 
+[![Join the chat at https://gitter.im/pors/reactionic](https://badges.gitter.im/pors/reactionic.svg)](https://gitter.im/pors/reactionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This repository contains a "kitchen sink" demo for the [React-Ionic](http://pors.github.io/reactionic/) library.
 
 It shows the features of the library in a single app and can also be used as a starting point for your own app.
