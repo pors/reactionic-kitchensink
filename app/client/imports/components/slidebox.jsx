@@ -2,14 +2,17 @@ import React from 'react';
 import { IonContent, IonSlideBox } from 'reactionic';
 
 var Slidebox = React.createClass({
+  contextTypes: {
+    ionSnapper: React.PropTypes.object
+  },
   componentDidMount() {
-    if (this.props.ionSnapper && this.props.ionSnapper.disable) {
-      this.props.ionSnapper.disable();
+    if (this.context.ionSnapper && this.context.ionSnapper.disable) {
+      this.context.ionSnapper.disable();
     }
   },
   componentWillUnmount() {
-    if (this.props.ionSnapper && this.props.ionSnapper.enable) {
-      this.props.ionSnapper.enable();
+    if (this.context.ionSnapper && this.context.ionSnapper.enable) {
+      this.context.ionSnapper.enable();
     }
   },
   render() {
@@ -18,13 +21,10 @@ var Slidebox = React.createClass({
                   scroll={false}
                   {...this.props}>
         <IonSlideBox>
-
-            <div className="slide-demo"><h3>Slide 1</h3></div>
-            <div className="slide-demo dark"><h3>Slide 2</h3></div>
-            <div className="slide-demo blue"><h3>Slide 3</h3></div>
-
-
-          </IonSlideBox>
+          <div className="slide-demo"><h3>Slide 1</h3></div>
+          <div className="slide-demo dark"><h3>Slide 2</h3></div>
+          <div className="slide-demo blue"><h3>Slide 3</h3></div>
+        </IonSlideBox>
       </IonContent>
     )
   }

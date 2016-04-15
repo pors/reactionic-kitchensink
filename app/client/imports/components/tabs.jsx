@@ -3,6 +3,9 @@ import { IonContent, IonHeaderBar, IonButton, IonTabs, IonTab } from 'reactionic
 import classnames from 'classnames';
 
 var Tabs = React.createClass({
+  contextTypes: {
+    ionPlatform: React.PropTypes.object
+  },
   render() {
     var backButton = (
       <IonButton icon="ion-ios-arrow-back"
@@ -12,8 +15,8 @@ var Tabs = React.createClass({
       />
     );
     var classes = classnames(
-      {'tabs-light tabs-striped tabs-icon-left': this.props.platform.isAndroid,
-       'tabs-light tabs-icon-top': !this.props.platform.isAndroid}
+      {'tabs-light tabs-striped tabs-icon-left': this.context.ionPlatform.isAndroid,
+       'tabs-light tabs-icon-top': !this.context.ionPlatform.isAndroid}
     );
     return (
       <div>
@@ -24,7 +27,7 @@ var Tabs = React.createClass({
                       {...this.props}
         />
         {React.cloneElement(this.props.children, { ...this.props })}
-        <IonTabs tabsTop={this.props.platform.isAndroid} customClasses={classes} ionUpdateHasX={this.props.ionUpdateHasX}>
+        <IonTabs tabsTop={this.context.ionPlatform.isAndroid} customClasses={classes}>
       	  <IonTab icon="ios-home" to="/tabs/one" label="Tab 1" />
           <IonTab icon="ios-star" to="/tabs/two" label="Tab 2" />
       	  <IonTab icon="ios-heart" to="/tabs/three" label="Tab 3" />
@@ -37,10 +40,8 @@ var Tabs = React.createClass({
 
 var TabsOne = React.createClass({
   render() {
-    var platform = this.props.platform;
     return (
-        <IonContent customClasses="padding"
-                    {...this.props}>
+        <IonContent customClasses="padding" {...this.props}>
           <h3>Tab 1</h3>
         </IonContent>
     );
@@ -49,10 +50,8 @@ var TabsOne = React.createClass({
 
 var TabsTwo = React.createClass({
   render() {
-    var platform = this.props.platform;
     return (
-      <IonContent customClasses="padding"
-                  {...this.props}>
+      <IonContent customClasses="padding" {...this.props}>
         <h3>Tab 2</h3>
       </IonContent>
     );
@@ -61,10 +60,8 @@ var TabsTwo = React.createClass({
 
 var TabsThree = React.createClass({
   render() {
-    var platform = this.props.platform;
     return (
-      <IonContent customClasses="padding"
-                  {...this.props}>
+      <IonContent customClasses="padding" {...this.props}>
         <h3>Tab 3</h3>
       </IonContent>
     );
@@ -73,10 +70,8 @@ var TabsThree = React.createClass({
 
 var TabsFour = React.createClass({
   render() {
-    var platform = this.props.platform;
     return (
-      <IonContent customClasses="padding"
-                  {...this.props}>
+      <IonContent customClasses="padding" {...this.props}>
         <h3>Tab 4</h3>
       </IonContent>
     );

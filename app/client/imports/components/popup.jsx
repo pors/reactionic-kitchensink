@@ -2,8 +2,11 @@ import React from 'react';
 import { IonContent, IonButton } from 'reactionic';
 
 var Popup = React.createClass({
+  contextTypes: {
+    ionUpdatePopup: React.PropTypes.func
+  },
   render() {
-    var ionUpdatePopup = this.props.ionUpdatePopup;
+    var ionUpdatePopup = this.context.ionUpdatePopup;
     return (
       <IonContent customClasses="padding" {...this.props}>
         <IonButton color="dark" type="outline" expand="block"

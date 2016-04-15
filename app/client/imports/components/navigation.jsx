@@ -12,8 +12,7 @@ var Navigation = React.createClass({
                             iconPosition="left"
                             color="dark"
                             type="outline"
-                            history={this.props.history}
-                            ionSetTransitionDirection={this.props.ionSetTransitionDirection}>
+                            history={this.props.history} >
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -38,8 +37,7 @@ var NavigationOne = React.createClass({
                             iconPosition="left"
                             color="dark"
                             type="outline"
-                            history={this.props.history}
-                            ionSetTransitionDirection={this.props.ionSetTransitionDirection}>
+                            history={this.props.history} >
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -64,8 +62,7 @@ var NavigationTwo = React.createClass({
                             iconPosition="left"
                             color="dark"
                             type="outline"
-                            history={this.props.history}
-                            ionSetTransitionDirection={this.props.ionSetTransitionDirection}>
+                            history={this.props.history} >
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -90,8 +87,7 @@ var NavigationThree = React.createClass({
                             iconPosition="left"
                             color="dark"
                             type="outline"
-                            history={this.props.history}
-                            ionSetTransitionDirection={this.props.ionSetTransitionDirection}>
+                            history={this.props.history} >
             Back</IonNavBackButton>
         </AbsoluteMiddle>
       </IonContent>

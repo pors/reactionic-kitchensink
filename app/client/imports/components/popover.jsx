@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonPopover, IonIcon } from 'reactionic';
+import { IonContent, IonIcon } from 'reactionic';
 
 var Popover = React.createClass({
   render() {

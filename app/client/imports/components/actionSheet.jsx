@@ -3,6 +3,9 @@ import { IonContent, IonButton } from 'reactionic';
 import { AbsoluteMiddle } from './utils/helpers.jsx';
 
 var ActionSheet = React.createClass({
+  contextTypes: {
+    ionUpdateActionSheet: React.PropTypes.func
+  },
   render() {
     var actionSheet = {
       titleText: 'ActionSheet Demo',
@@ -32,7 +35,7 @@ var ActionSheet = React.createClass({
     return (
       <IonContent customClasses="padding" {...this.props}>
         <AbsoluteMiddle>
-          <IonButton color="dark" type="outline" onClick={() => this.props.ionUpdateActionSheet(actionSheet)}>Show ActionSheet</IonButton>
+          <IonButton color="dark" type="outline" onClick={() => this.context.ionUpdateActionSheet(actionSheet)}>Show ActionSheet</IonButton>
         </AbsoluteMiddle>
       </IonContent>
     )

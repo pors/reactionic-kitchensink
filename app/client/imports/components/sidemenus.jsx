@@ -11,7 +11,6 @@ var SideMenus = React.createClass({
                             color="dark"
                             type="outline"
                             history={this.props.history}
-                            ionSetTransitionDirection={this.props.ionSetTransitionDirection}
           > Back to Index</IonNavBackButton>
         </AbsoluteMiddle>
       </IonContent>

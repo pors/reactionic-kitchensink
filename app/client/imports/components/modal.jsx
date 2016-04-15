@@ -3,6 +3,9 @@ import { IonContent, IonModal, IonButton } from 'reactionic';
 import { AbsoluteMiddle } from './utils/helpers.jsx';
 
 var Modal = React.createClass({
+  contextTypes: {
+    ionShowModal: React.PropTypes.func
+  },
   render() {
     var demoModal = <DemoModal {...this.props} />;
 
@@ -10,7 +13,7 @@ var Modal = React.createClass({
       <IonContent customClasses="padding"
                   {...this.props}>
         <AbsoluteMiddle>
-          <IonButton color="dark" type="outline" onClick={() => this.props.ionShowModal(demoModal)}>Show modal</IonButton>
+          <IonButton color="dark" type="outline" onClick={() => this.context.ionShowModal(demoModal)}>Show modal</IonButton>
         </AbsoluteMiddle>
       </IonContent>
     )

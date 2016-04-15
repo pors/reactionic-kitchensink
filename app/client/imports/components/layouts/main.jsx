@@ -6,11 +6,10 @@ import { IonNavView, IonView, IonContent, IonNavBar, IonNavBackButton, IonFooter
 import { DemoPopover } from '../popover';
 
 var Layout = React.createClass({
-  childContextTypes:{
-    ionSnapper: React.PropTypes.object
-  },
-  getChildContext(){
-    return { ionSnapper: this.props.ionSnapper}
+  contextTypes: {
+    ionSnapper: React.PropTypes.object,
+    ionShowPopover: React.PropTypes.func,
+    ionPlatform: React.PropTypes.object
   },
   getPageProps: function(path) {
 
@@ -19,7 +18,6 @@ var Layout = React.createClass({
                         color=""
                         type="clear"
                         history={this.props.history}
-                        ionSetTransitionDirection={this.props.ionSetTransitionDirection}
                         customClasses="button-stage"
       />
     );
@@ -39,20 +37,20 @@ var Layout = React.createClass({
 
     if (path === '/popover') {
       let icon = 'ion-more';
-      if (this.props.platform.isAndroid) {
+      if (this.context.ionPlatform.isAndroid) {
         icon = 'ion-android-more-vertical';
       }
       let demoPopover = <DemoPopover />
-      pageProps['/popover'].rightHeaderButton = <IonPopoverButton type="clear" icon={icon} onClick={ () => { this.props.ionShowPopover(demoPopover) } } />
+      pageProps['/popover'].rightHeaderButton = <IonPopoverButton type="clear" icon={icon} onClick={ () => { this.context.ionShowPopover(demoPopover) } } />
     }
     
     if (path === '/sideMenus') {
       let icon = 'ion-navicon';
-      if (this.props.platform.isAndroid) {
+      if (this.context.ionPlatform.isAndroid) {
         icon = 'ion-android-more-vertical';
       }
-      let leftButton = <IonButton type="clear" icon={icon} onClick={ () => { this.props.ionSnapper.toggle('left') } } />
-      let rightButton = <IonButton type="clear" icon={icon} onClick={ () => { this.props.ionSnapper.toggle('right') } } />
+      let leftButton = <IonButton type="clear" icon={icon} onClick={ () => { this.context.ionSnapper.toggle('left') } } />
+      let rightButton = <IonButton type="clear" icon={icon} onClick={ () => { this.context.ionSnapper.toggle('right') } } />
       pageProps['/sideMenus'].leftHeaderButton = leftButton;
       pageProps['/sideMenus'].rightHeaderButton = rightButton;
     }
@@ -72,7 +70,7 @@ var Layout = React.createClass({
             </div>
             <div className="content has-header side-menu">
               <div className="list">
-                <div className="item item-icon-right" onClick={ () => { this.props.ionSnapper.close() } }>
+                <div className="item item-icon-right" onClick={ () => { this.context.ionSnapper.close() } }>
                   Close Me <IonIcon icon="ios-arrow-right" />
                 </div>
               </div>
@@ -84,7 +82,7 @@ var Layout = React.createClass({
             </div>
             <div className="content has-header side-menu">
               <div className="list">
-                <div className="item item-icon-left" onClick={ () => { this.props.ionSnapper.close() } }>
+                <div className="item item-icon-left" onClick={ () => { this.context.ionSnapper.close() } }>
                   Close Me <IonIcon icon="ios-arrow-back" />
                 </div>
               </div>
@@ -101,25 +99,7 @@ var Layout = React.createClass({
 
           <IonNavView customClasses="" {...this.props}>
             <IonView customClasses="" {...this.props}>
-              {React.cloneElement(this.props.children, {
-                platform: this.props.platform,
-                ionSetTransitionDirection: this.props.ionSetTransitionDirection,
-                ionShowModal: this.props.ionShowModal,
-                ionUpdateActionSheet: this.props.ionUpdateActionSheet,
-                ionUpdatePopup: this.props.ionUpdatePopup,
-                ionShowBackdrop: this.props.ionShowBackdrop,
-                ionShowLoading: this.props.ionShowLoading,
-                ionKeyboardHeight: this.props.ionKeyboardHeight,
-                pageList: this.props.pageList,
-                ionUpdateHasX: this.props.ionUpdateHasX,
-                ionHasTabs: this.props.ionHasTabs,
-                ionHasTabsTop: this.props.ionHasTabsTop,
-                ionHasHeader: this.props.ionHasHeader,
-                ionHasSubheader: this.props.ionHasSubheader,
-                ionHasFooter: this.props.ionHasFooter,
-                ionHasSubfooter: this.props.ionHasSubfooter,
-                ionSnapper: this.props.ionSnapper
-               })}
+              {React.cloneElement(this.props.children, { pageList: this.props.pageList })}
             </IonView>
           </IonNavView>
         </IonSideMenuContent>
