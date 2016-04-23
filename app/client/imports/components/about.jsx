@@ -8,7 +8,7 @@ var About = React.createClass({
                   {...this.props}>
         <h2>About React-Ionic</h2>
         <p>React-Ionic is an open source library for implementing hybrid mobile apps (iOS and Android).</p>
-        <p>For more information go to <a href="http://pors.github.io/reactionic/">pors.github.io/reactionic</a></p>
+        <p>For more information go to <a href="http://reactionic.github.io/">reactionic.github.io</a></p>
       </IonContent>
     );
   }

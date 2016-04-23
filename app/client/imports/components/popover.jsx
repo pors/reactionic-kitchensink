@@ -28,13 +28,12 @@ var DemoPopover = React.createClass({
               Meteor
               <IonIcon icon="ios-arrow-right" />
             </a>
-            <a className="item item-icon-right" href="http://pors.github.io/reactionic/" target="_blank">
+            <a className="item item-icon-right" href="http://reactionic.github.io/" target="_blank">
               React-Ionic
               <IonIcon icon="ios-arrow-right" />
             </a>
           </div>
         </div>
-
     );
   }
 });

@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/pors/reactionic](https://badges.gitter.im/pors/reactionic.svg)](https://gitter.im/pors/reactionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This repository contains a "kitchen sink" demo for the [React-Ionic](http://pors.github.io/reactionic/) library.
+This repository contains a "kitchen sink" demo for the [React-Ionic](http://reactionic.github.io/) library.
 
 It shows the features of the library in a single app and can also be used as a starting point for your own app.
 
@@ -21,9 +21,9 @@ It shows the features of the library in a single app and can also be used as a s
 
 React-Ionic is a library that allows you to create modern hybrid apps for both iOS and Android. It combines the power of [React](https://facebook.github.io/react/) with the robustness of [Ionic](http://ionicframework.com/).
 
-Read more about React-Ionic [here](http://pors.github.io/reactionic/).
+Read more about React-Ionic [here](http://reactionic.github.io/).
 
-The actual library can be found [here](https://github.com/pors/reactionic).
+The actual library can be found [here](https://github.com/reactionic/reactionic).
 
 The kitchen sink demo app can be installed in a number of ways, here we show you two options:
 
@@ -55,7 +55,7 @@ how: [meteor.com](https://www.meteor.com/install)
 
 Installation is straightforward:
 
-* Download the zip file [here](https://github.com/pors/reactionic-kitchensink/archive/master.zip)
+* Download the zip file [here](https://github.com/reactionic/reactionic-kitchensink/archive/master.zip)
 * Unzip the file
 
 Then in a terminal:
@@ -102,7 +102,7 @@ Or without the `sudo`, depending on your setup.
 
 Installation is straightforward:
 
-* Download the zip file [here](https://github.com/pors/reactionic-kitchensink/archive/master.zip)
+* Download the zip file [here](https://github.com/reactionic/reactionic-kitchensink/archive/master.zip)
 * Unzip the file
 
 Then in a terminal:
@@ -115,7 +115,7 @@ Then in a terminal:
 
 ## Next Steps ##
 
-The [source code](https://github.com/pors/reactionic-kitchensink) of the kitchen sink demo should help you create your own app. 
+The [source code](https://github.com/reactionic/reactionic-kitchensink) of the kitchen sink demo should help you create your own app. 
 
-Also have a look at the [guide](https://github.com/pors/reactionic/blob/master/GUIDE.md) for more detail.
+Also have a look at the [guide](https://github.com/reactionic/reactionic/blob/master/GUIDE.md) for more detail.
 
