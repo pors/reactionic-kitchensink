@@ -9,14 +9,15 @@ var Layout = React.createClass({
   contextTypes: {
     ionSnapper: React.PropTypes.object,
     ionShowPopover: React.PropTypes.func,
-    ionPlatform: React.PropTypes.object
+    ionPlatform: React.PropTypes.object,
+    router: React.PropTypes.object.isRequired
   },
   getPageProps: function(path) {
     var backButton = (
       <IonNavBackButton icon="ion-ios-arrow-back"
                         color=""
                         type="clear"
-                        history={this.props.history}
+                        history={this.context.router}
                         customClasses="button-stage"
       />
     );

@@ -10,7 +10,7 @@ var App = React.createClass({
   },
   getChildContext() {
     return {
-        location: this.props.location
+      location: this.props.location
     }
   },
   getInitialState: function() {
