@@ -1,12 +1,12 @@
 // This section sets up some basic app metadata,
 // the entire section is optional.
 App.info({
-    id: 'net.pors.reactionic',
+    id: 'io.github.reactionic',
     name: 'Reactionic',
     description: 'React Ionic',
     author: 'pors.net',
     email: 'mark@pors.net',
-    website: 'http://pors.net/reactionic',
+    website: 'http://reactionic.github.io/',
     version: '0.0.1',
     buildNumber: 1
 });
