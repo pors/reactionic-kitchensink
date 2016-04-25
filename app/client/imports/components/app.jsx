@@ -5,6 +5,14 @@ import { getPlatform } from './utils/helpers.jsx';
 if (typeof Meteor === 'undefined') { require('../../styles/app.scss'); } // Only for webpack builds
 
 var App = React.createClass({
+  childContextTypes: {
+    location: React.PropTypes.object
+  },
+  getChildContext() {
+    return {
+        location: this.props.location
+    }
+  },
   getInitialState: function() {
     return {platformOverride: this.props.location.query.platformOverride};
   },
@@ -18,10 +26,10 @@ var App = React.createClass({
   },
   render() {
     var platform = getPlatform(this.state.platformOverride);
-    
+
     return (
       <IonBody platform={platform} >
-        { React.cloneElement(this.props.children, {pageList:this.props.route.pageList}) }        
+        { React.cloneElement(this.props.children, {pageList:this.props.route.pageList}) }
       </IonBody>
     );
   }
