@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import _ from 'lodash';
-import { Router, Route, IndexRoute } from "react-router";
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import App from './imports/components/app.jsx';
 import Layout from './imports/components/layouts/main.jsx';
 import NoMatch from './imports/components/nomatch.jsx';
@@ -26,7 +25,6 @@ import Spinners from './imports/components/spinners.jsx';
 import { Tabs, TabsOne, TabsTwo, TabsThree, TabsFour } from './imports/components/tabs.jsx';
 
 var main = function () {
-  var history = createBrowserHistory();
 
   var pageList = [
     { path:'/', component:Index, title:'React Ionic', done:true},
@@ -97,7 +95,7 @@ var main = function () {
     </Route>
   );
 
-  ReactDOM.render(<Router history={history}>{routes}</Router>, document.getElementById('app')) ;
+  ReactDOM.render(<Router history={browserHistory}>{routes}</Router>, document.getElementById('app')) ;
 };
 
 if (typeof Meteor !== 'undefined') {
