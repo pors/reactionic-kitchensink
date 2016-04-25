@@ -17,7 +17,6 @@ var Layout = React.createClass({
       <IonNavBackButton icon="ion-ios-arrow-back"
                         color=""
                         type="clear"
-                        history={this.props.history}
                         customClasses="button-stage"
       />
     );
@@ -43,7 +42,7 @@ var Layout = React.createClass({
       let demoPopover = <DemoPopover />
       pageProps['/popover'].rightHeaderButton = <IonPopoverButton type="clear" icon={icon} onClick={ () => { this.context.ionShowPopover(demoPopover) } } />
     }
-    
+
     if (path === '/sideMenus') {
       let icon = 'ion-navicon';
       if (this.context.ionPlatform.isAndroid) {
