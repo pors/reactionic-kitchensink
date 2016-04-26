@@ -11,8 +11,7 @@ var Navigation = React.createClass({
           <IonNavBackButton icon="ion-chevron-left"
                             iconPosition="left"
                             color="dark"
-                            type="outline"
-                            history={this.props.history} >
+                            type="outline">
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -36,8 +35,7 @@ var NavigationOne = React.createClass({
           <IonNavBackButton icon="ion-chevron-left"
                             iconPosition="left"
                             color="dark"
-                            type="outline"
-                            history={this.props.history} >
+                            type="outline">
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -61,8 +59,7 @@ var NavigationTwo = React.createClass({
           <IonNavBackButton icon="ion-chevron-left"
                             iconPosition="left"
                             color="dark"
-                            type="outline"
-                            history={this.props.history} >
+                            type="outline">
             Back</IonNavBackButton>
           <span className="padding" />
           <IonButton  icon="ion-chevron-right"
@@ -86,8 +83,7 @@ var NavigationThree = React.createClass({
           <IonNavBackButton icon="ion-chevron-left"
                             iconPosition="left"
                             color="dark"
-                            type="outline"
-                            history={this.props.history} >
+                            type="outline">
             Back</IonNavBackButton>
         </AbsoluteMiddle>
       </IonContent>

@@ -10,7 +10,6 @@ var SideMenus = React.createClass({
           <IonNavBackButton icon="ion-chevron-left"
                             color="dark"
                             type="outline"
-                            history={this.props.history}
           > Back to Index</IonNavBackButton>
         </AbsoluteMiddle>
       </IonContent>
