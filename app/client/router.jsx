@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import _ from 'lodash';
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './imports/components/app.jsx';
 import Layout from './imports/components/layouts/main.jsx';
 import NoMatch from './imports/components/nomatch.jsx';
@@ -25,7 +25,6 @@ import Spinners from './imports/components/spinners.jsx';
 import { Tabs, TabsOne, TabsTwo, TabsThree, TabsFour } from './imports/components/tabs.jsx';
 
 var main = function () {
-
   var pageList = [
     { path:'/', component:Index, title:'React Ionic', done:true},
     { path:'/about', component:About, title:'About', done:true},

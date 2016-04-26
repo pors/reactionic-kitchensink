@@ -17,7 +17,6 @@ var Layout = React.createClass({
       <IonNavBackButton icon="ion-ios-arrow-back"
                         color=""
                         type="clear"
-                        history={this.context.router}
                         customClasses="button-stage"
       />
     );

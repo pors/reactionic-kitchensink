@@ -28,7 +28,7 @@ var App = React.createClass({
     var platform = getPlatform(this.state.platformOverride);
 
     return (
-      <IonBody platform={platform} >
+      <IonBody platform={platform} {...this.props}>
         { React.cloneElement(this.props.children, {pageList:this.props.route.pageList}) }
       </IonBody>
     );
