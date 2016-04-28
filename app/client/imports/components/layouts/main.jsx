@@ -10,7 +10,8 @@ var Layout = React.createClass({
     ionSnapper: React.PropTypes.object,
     ionShowPopover: React.PropTypes.func,
     ionPlatform: React.PropTypes.object,
-    router: React.PropTypes.object.isRequired
+    router: React.PropTypes.object.isRequired,
+    location: React.PropTypes.object
   },
   getPageProps: function(path) {
     var backButton = (
@@ -58,7 +59,7 @@ var Layout = React.createClass({
     return pageProps[path];
   },
   render() {
-    var currentPageProps = this.getPageProps(this.props.location.pathname);
+    var currentPageProps = this.getPageProps(this.context.location.pathname);
 
     return (
       <IonSideMenuContainer {...this.props}>
