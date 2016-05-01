@@ -2,8 +2,6 @@ import React from 'react';
 import { IonBody } from 'reactionic';
 import { getPlatform } from './utils/helpers.jsx';
 
-if (typeof Meteor === 'undefined') { require('../../styles/app.scss'); } // Only for webpack builds
-
 var App = React.createClass({
   getInitialState: function() {
     return {platformOverride: this.props.location.query.platformOverride};

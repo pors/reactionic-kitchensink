@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: './app/client/router',
+  entry: './entry.js',
   output: {
     filename: 'build/index.js'
   },  
@@ -12,7 +12,11 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, 
         loader: 'babel',
-        include: path.resolve(__dirname, "app")
+        include: path.resolve(__dirname, "app"),
+        query:
+        {
+          presets:['react', 'es2015', 'stage-0']
+        }
       },
       {
         test: /\.scss$/,

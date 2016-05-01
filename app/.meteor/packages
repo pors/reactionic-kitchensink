@@ -7,7 +7,6 @@
 meteor-base             # Packages every Meteor app needs to have
 mongo                   # The database Meteor supports right now
 session                 # Client-side reactive dictionary for your app
-jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
 
 
@@ -18,6 +17,7 @@ random
 react-meteor-data
 fourseven:scss
 mobile-experience
-standard-minifier-css
 standard-minifier-js
 ecmascript
+package-stats-opt-out
+standard-minifier-css
