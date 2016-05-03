@@ -12,7 +12,7 @@ var Lists = React.createClass({
             <IonIcon icon="email" />
             Check mail
           </IonItem>
-          <IonItem iconLeft iconRight>
+          <IonItem iconLeft iconRight onClick={() => { console.log('Calling Ma...') }}>
             <IonIcon icon="chatbubble-working" />
             Call Ma
             <IonIcon icon="ios-telephone-outline" />
