@@ -59,8 +59,8 @@ var Layout = React.createClass({
     return pageProps[path];
   },
   render() {
-    var currentPageProps = this.getPageProps(this.props.children.props.route.path);
-
+    var currentPageProps = this.getPageProps(this.context.location.pathname);
+    
     return (
       <IonSideMenuContainer {...this.props}>
         <IonSideMenus>
