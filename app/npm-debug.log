@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i' ]
+2 info using npm@3.7.5
+3 info using node@v4.3.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly idealTree:prePrune app
+21 silly loadIdealTree Finishing
+22 silly currentTree app
+23 silly idealTree app
+24 silly generateActionsToTake Starting
+25 silly install generateActionsToTake
+26 silly generateActionsToTake Finishing
+27 silly diffTrees action count 0
+28 silly decomposeActions action count 0
+29 silly executeActions Starting
+30 silly install executeActions
+31 silly doSerial global-install 0
+32 silly doParallel fetch 0
+33 verbose correctMkdir /Users/mark/.npm/_locks correctMkdir not in flight; initializing
+34 verbose lock using /Users/mark/.npm/_locks/staging-60bceac58fdf80c3.lock for /Users/mark/dev/reactionic-kitchensink/app/node_modules/.staging
+35 verbose unlock done using /Users/mark/.npm/_locks/staging-60bceac58fdf80c3.lock for /Users/mark/dev/reactionic-kitchensink/app/node_modules/.staging
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Starting
+39 silly runTopLevelLifecycles Finishing
+40 silly install printInstalled
+41 warn enoent ENOENT: no such file or directory, open '/Users/mark/dev/reactionic-kitchensink/app/package.json'
+42 warn app No description
+43 warn app No repository field.
+44 warn app No README data
+45 warn app No license field.
+46 verbose stack Error: EEXIST: file already exists, mkdir '/Users/mark/dev/reactionic-kitchensink/app/node_modules'
+46 verbose stack     at Error (native)
+47 verbose cwd /Users/mark/dev/reactionic-kitchensink/app
+48 error Darwin 15.5.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i"
+50 error node v4.3.1
+51 error npm  v3.7.5
+52 error path /Users/mark/dev/reactionic-kitchensink/app/node_modules
+53 error code EEXIST
+54 error errno -17
+55 error syscall mkdir
+56 error EEXIST: file already exists, mkdir '/Users/mark/dev/reactionic-kitchensink/app/node_modules'
+57 error File exists: /Users/mark/dev/reactionic-kitchensink/app/node_modules
+58 error Move it away, and try again.
+59 verbose exit [ -17, true ]
