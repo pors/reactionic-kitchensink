@@ -6,12 +6,12 @@ module.exports = {
     filename: 'build/index.js'
   },  
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json']
   },
   module: {
     loaders: [
       { test: /\.jsx?$/, 
-        loader: 'babel',
+        loader: 'babel-loader',
         include: path.resolve(__dirname, "app"),
         query:
         {
@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }

@@ -3,7 +3,7 @@ $bar-dark-text: $react-blue;
 $dark: #000000;
 $positive: $react-blue;
 
-@import "{}/node_modules/reactionic/dist/scss/styles/reactionic.scss";
+@import "../../../node_modules/reactionic/dist/scss/styles/_reactionic.scss";
 
 .bar-dark .button.button-clear {
     color: $react-blue;
